@@ -1,3 +1,8 @@
+# Sets the default Powershell Command Prompt as: [time] currentdir >
+# and clears the window.
+# Put in %UserProfile%\Documents\WindowsPowerShell\
+# https://github.com/brainwipe/Scripts
+
 function Prompt {
   # Print the current time:
   Write-Host ("[") -nonewline -foregroundcolor DarkGray
@@ -9,5 +14,10 @@ function Prompt {
   Write-Host (" >") -nonewline -foregroundcolor Green
   return " ";
 }
+
+# Import all the functions in the Network module in ./Modules/Network.psm1
+Import-Module Network
+
+# Move to C: and clear the screen
 cd \
 Clear-Host
