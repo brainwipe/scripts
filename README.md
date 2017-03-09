@@ -39,3 +39,17 @@ Joins together `netstat` and Win32 process monitor to provide a list of
 Originally from [here](http://poshcode.org/4129)
 
 In `./powershell/modules/network/network.psm1`
+
+## Bash
+Using MINGW64 bash shell you can add your scripts directory to path using:
+
+`PATH /path/to/brainwipe/scripts:${PATH}`
+`export PATH`
+
+### Gitter
+This script adds all and commits, prompting for a JIRA ticket number (which I always forget) and then pushes to remote.
+Written by [ClinicalCharles](https://github.com/ClinicalCharles).
+
+Usage: `gitter`
+
+You'll then be prompted for your JIRA ticket numbers and a commit message. 
