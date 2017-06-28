@@ -1,6 +1,12 @@
 # Scripts
 Useful scripts for software developers. Organised into folders by type.
 
+## Cmd
+The windows command shell.
+
+### ls.bat
+A simple batch file (`.bat`) to alias `dir` as `ls`. Add this folder to your `PATH` variable to use. In Windows 10, press the Windows key and type PATH.
+
 ## Powershell
 The best way to use these scripts is create a symbolic link between your `%UserProfile%\Documents\WindowsPowerShell\` and the powershell folder of the git repository.
 
@@ -26,6 +32,10 @@ More information on [TechNet](https://technet.microsoft.com/en-us/magazine/2008.
 #### Imports the modules in the powershell folders
 
 All of the scripts I have included in Powershell modules (Powershell v2 onwards) are imported.
+
+#### Sets the Solarized Dark theme
+
+These are the files for the [Solarize](http://ethanschoonover.com/solarized) theme by [@leddt](https://github.com/leddt) in his [own repo](https://github.com/leddt/visualstudio-colors-solarized). Check out the instructions there.
 
 #### Go to c:, Clear the screen
 
