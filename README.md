@@ -50,6 +50,12 @@ Originally from [here](http://poshcode.org/4129)
 
 In `./powershell/modules/network/network.psm1`
 
+### Docker clean
+
+Usage: `docker-clean.ps1`
+
+A full docker clean down - useful for developer system cleaning. Stops all running containers, removes them and deleted their associated images.
+
 ## Bash
 Using MINGW64 bash shell you can add your scripts directory to path using:
 

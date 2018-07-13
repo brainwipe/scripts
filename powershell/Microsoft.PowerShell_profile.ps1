@@ -15,8 +15,12 @@ function Prompt {
   return " ";
 }
 
+
+Import-Module PSReadLine
+
+
 # Import all the functions in the Network module in ./Modules/Network.psm1
-Import-Module Network
+#Import-Module Network
 
 # Set Solarize Dark
 . (Join-Path -Path (Split-Path -Parent -Path $PROFILE) -ChildPath $(switch($HOST.UI.RawUI.BackgroundColor.ToString()){'White'{'Set-SolarizedLightColorDefaults.ps1'}'Black'{'SolarizeTheme/Set-SolarizedDarkColorDefaults.ps1'}default{return}}))
