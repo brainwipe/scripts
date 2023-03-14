@@ -2,7 +2,6 @@
 # and clears the window.
 # Put in %UserProfile%\Documents\WindowsPowerShell\
 # https://github.com/brainwipe/scripts
-
 function Prompt {
   # Print the current time:
   Write-Host ("[") -nonewline
@@ -15,17 +14,21 @@ function Prompt {
   return " ";
 }
 
+# Oh My Posh https://ohmyposh.dev/docs/
+$env:POSH_SESSION_DEFAULT_USER = [System.Environment]::Username
+oh-my-posh --init --shell pwsh --config (Join-Path -Path (Split-Path -Parent -Path $PROFILE) -ChildPath 'OhMyPosh/ohmyposhv3.json') | Invoke-Expression
+
+# From: Install-Module -Name Terminal-Icons -Repository PSGallery
+Import-Module -Name Terminal-Icons
+
 Import-Module PSReadLine
 
 # Import all the functions in the Network module in ./Modules/Network.psm1
 Import-Module Network -DisableNameChecking
 
-$env:PSModulePath = $env:PSModulePath + ";c:\Projects\MCO-PowershellCore\src"
+$env:PSModulePath = $env:PSModulePath + ";c:\Projects\MCO\MCO.PowershellCore\src"
 Import-Module MCO -DisableNameChecking
 
-. (Join-Path -Path (Split-Path -Parent -Path $PROFILE) -ChildPath 'SolarizeTheme/Set-SolarizedDarkColorDefaults.ps1')
-
 # Move to C: and clear the screen
-cd \
-cls
+Set-Location c:/Projects/MCO
 
