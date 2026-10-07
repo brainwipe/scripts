@@ -11,6 +11,7 @@ winget install -e --id Google.GoogleDrive
 winget install -e --id Obsidian.Obsidian
 winget install -e --id Discord.Discord
 winget install -e --id WhatsApp.WhatsApp
+winget install -e --id Spotify.Spotify
 
 Write-Host "Copying Powershell Profile and OhMyPosh config"
 Copy-Item -Path C:\Projects\brainwipe\scripts\powershell\Microsoft.PowerShell_profile.ps1 -Destination $PROFILE -Force
